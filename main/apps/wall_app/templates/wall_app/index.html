@@ -13,14 +13,129 @@
     <script src="{% static 'app_name/js/script.js' %}"></script>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     <style type="text/css">
+
+      nav {
+
+          border: black 1px solid;
+      }
+
+      main {
+          border: black 1px solid;
+
+          width: 98%;
+          margin: 0.5%;
+          align-items: center;
+          padding: 0.5%;
+          text-align: center;
+      }
+
+      table tr td {
+          width: 50px;
+          height: 50px;
+      }
+
+      #submit-button, #submit-button-login {
+          background-color: red;
+          color: white;
+          width: 50%;
+          margin-left: 49%;
+          box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+      }
+
+      label { display: inline-block; }
+
+      .field {
+          border-color: black;
+          width: 50%;
+          float: right;
+      }
+
+      #left-col, #right-col {
+<!--          width: 49%;-->
+          display: inline-block;
+          vertical-align: top;
+          padding: 0.5%;
+
+          <!-- background: blue;-->
+          <!-- opacity: 0.5;-->
+      }
+
+
+      #nav-left{
+<!--        background: blue;-->
+        width: 40%
+        height: 10%
+        border: 1px black solid;
+      }
+
+      #nav-right{
+<!--        background: red;-->
+<!--        width: 40%-->
+<!--        height: 10%-->
+        border: 1px black solid;
+        display: inline-block;
+        vertical-align: right;
+      }
     </style>
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
   </head>
   <body>
-    <!-- ------------------------------------------------------------------- -->
-    <main>
-        <h1>Hello</h1>
+      <nav>
+          <div id="nav-left">
+            <h1>The Wall!</h1>
+          </div>
+          <div id="nav-right">
+            <h4>Hello </h4>
 
+            <!-- TODO: Log off route -->
+            <h5><a href="/">Log-Off</a></h5>
+          </div>
+
+      </nav>
+      <!-- ------------------------------------------------------------------------------------------------------- -->
+      <main>
+
+        <div id="left-col">
+          <!-- TODO: Left-col-->
+        </div>
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+        <div id="right-col">
+
+          <form action='/post_message' method='post'>
+            {% csrf_token %}
+
+            <!-- text-field -->
+            <div class="form-group">
+              <label for="message">Post a Message: </label>
+              <input type="text" id="message" class="field" name="message" class="form-control">
+            </div>
+
+            <!-- submit-button -->
+            <input type='submit' id="submit-button" name="submit-button" value='Post-Message' class="form-control"
+                   class="shadow-lg p-3 mb-5 bg-white rounded">
+          </form>
+
+
+
+          <!-- # TODO: Loop over all the current message rows in the message table-->
+          <!-- # -TO do this simply pass in as context via python-->
+
+          <!-- link to books page -->
+          <a href="/">Books</a>
+
+
+        {% for comment in comments %}
+          <div>ID-{{ comment.id }}: {{ comment.message }}</div>
+        {% endfor %}
+
+        </div> <!-- left-col -->
+
+
+
+
+
+        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+      <!-- ------------------------------------------------------------------------------------------------------- -->
     </main>
   </body>
 </html>
