@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
-from .models import Messages, Users
+from .models import Users, Messages, Comments
 from datetime import datetime
 import bcrypt
 # ======================================================================================================================
@@ -29,9 +29,6 @@ def wall(request):
 # ======================================================================================================================
 def post_message(request):
 
-    if request.method != "POST":
-        print("ERROR: Expecting a POST request to be made to this route")
-
     # Step 0: Grab the value of the field from request.POST['message']
     message = request.POST['message']
 
@@ -46,6 +43,25 @@ def post_message(request):
     context = {'messages': messages}
 
     return render(request, "wall_app/wall.html", context)
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+def post_comment(request):
+
+    # Step 0: Grab the value of the field from request.POST['comment']
+    comment = request.POST['comment']
+
+    # Step 1: Create a new comment row in the Table
+    #comment = Comment.objects.create(message=message) # BEFORE adding [FK]
+    user_id = request.session['user_logged_in']['id']
+    user = Users.objects.get(id=user_id)
+    comment = Comments.objects.create(comment=comment, user=user)
+
+    # Step 2: Pass table into HTML
+    comments = Comments.objects.all()
+    messages = Messages.objects.all()
+    context = {'messages': messages, 'comments': comments}
+
+    return render(request, "wall_app/wall.html", context)
+# ======================================================================================================================
 # ======================================================================================================================
 # ======================================================================================================================
 def validate(request):

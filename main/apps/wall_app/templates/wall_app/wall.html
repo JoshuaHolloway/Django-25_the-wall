@@ -28,13 +28,7 @@
               text-align: center;
           }
 
-          table tr td {
-              width: 50px;
-              height: 50px;
-          }
-
           #submit-button, #submit-button-comment {
-              background-color: red;
               color: white;
               width: 50%;
               margin-left: 49%;
@@ -53,8 +47,6 @@
               float: right;
           }
 
-
-
           #nav-left{
             /* background: blue; */
             width: 40%
@@ -72,10 +64,9 @@
           }
 
           #message_box {
-            height: 100px;
-            /* width: 95%; */
-            background: red;
-            opacity: 0.5;
+            border: dashed 1px red;
+            /* background: red;
+            opacity: 0.5; */
           }
         </style>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -123,24 +114,30 @@
                 {% for message in messages reversed %}
                     <div id="message_box">
                         <p class="card-text">ID-{{ message.id }}: {{ message.message }}  {{message.created_at}} {{message.user.first_name}}</p>
+                        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                        <form action='/post_comment' method='post'>
+                            {% csrf_token %}
 
-                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-                    <form action='/post_comment' method='post'>
-                        {% csrf_token %}
+                            <!-- text-field -->
+                            <div class="form-group">
+                                <label for="comment">Post a Comment: </label>
+                                <input type="text" id="comment" class="field" name="comment" class="form-control">
+                            </div>
 
-                        <!-- text-field -->
-                        <div class="form-group">
-                            <label for="comment">Post a Comment: </label>
-                            <input type="text" id="comment" class="field" name="comment" class="form-control">
-                        </div>
+                            <!-- submit-button -->
+                            <input type='submit' id="submit-button-comment" name="submit-button-comment" value='Post-Comment' class="form-control"
+                                   class="shadow-lg p-3 mb-5 bg-white rounded">
 
-                        <!-- submit-button -->
-                        <input type='submit' id="submit-button-comment" name="submit-button-comment" value='Post-Comment' class="form-control"
-                               class="shadow-lg p-3 mb-5 bg-white rounded">
-                    </form>
-                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                            {% for comment in comments reversed %}
+                                <div id="comment_box">
+                                <p class="card-text">ID-{{ comment.id }}: {{ comment.comment }}  {{comment.created_at}} {{comment.user.first_name}}</p>
 
-                    </div>
+                            {% endfor %}
+                            </div> <!-- comment_box-->
+
+                        </form>
+                        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                    </div> <!-- message_box-->
                 {% endfor %}
             </div> <!-- card-body -->
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
