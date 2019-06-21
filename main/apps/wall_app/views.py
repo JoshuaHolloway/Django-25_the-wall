@@ -1,14 +1,14 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
-from .models import Comment, User
+from .models import Comments, Users
 from datetime import datetime
 import bcrypt
 # ======================================================================================================================
 def get_user_info(user_id):
-    return {'user': User.objects.get(id=user_id)}
+    return {'user': Users.objects.get(id=user_id)}
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 def get_all_users_info():
-    return {'users': User.objects.all()}
+    return {'users': Users.objects.all()}
 # ======================================================================================================================
 # ======================================================================================================================
 # ======================================================================================================================
@@ -25,7 +25,7 @@ def wall(request):
 
     # time = datetime.now()
     # time = time.strftime("%Y/%m/%d %I:%M %p")
-    return render(request, "wall_app/index.html", {'comments': Comment.objects.all()})
+    return render(request, "wall_app/index.html", {'comments': Comments.objects.all()})
 # ======================================================================================================================
 def post_message(request):
 
@@ -38,11 +38,11 @@ def post_message(request):
     # Step 1: Create a new message row in the Table
     #comment = Comment.objects.create(message=message) # BEFORE adding [FK]
     user_id = request.session['user_logged_in']['id']
-    user = User.objects.get(id=user_id)
-    comment = Comment.objects.create(message=message, user=user)
+    user = Users.objects.get(id=user_id)
+    comment = Comments.objects.create(message=message, user=user)
 
     # Step 2: Pass table into HTML
-    comments = Comment.objects.all()
+    comments = Comments.objects.all()
     context = {'comments': comments}
 
     return render(request, "wall_app/index.html", context)
@@ -54,7 +54,7 @@ def validate(request):
     valid = False
 
     # pass the post data to the method we wrote and save the response in a variable called errors
-    errors = User.objects.basic_validator(request.POST, User.objects.all())
+    errors = Users.objects.basic_validator(request.POST, Users.objects.all())
 
     # check if the errors dictionary has anything in it
     if len(errors) > 0:
@@ -86,7 +86,7 @@ def register(request):
         password_hash = bcrypt.hashpw(password_orig.encode(), bcrypt.gensalt())
 
         # Create row in database
-        user = User.objects.create(
+        user = Users.objects.create(
             first_name=first_name,
             last_name=last_name,
             email=email,
@@ -106,7 +106,7 @@ def userLogin(request):
 
     # Grab row from database IF email is in database
     # TODO: Check to see if email is in database
-    user = User.objects.get(email=email)
+    user = Users.objects.get(email=email)
 
 
     # Grab entered password and test against stored hash

@@ -47,7 +47,7 @@ class UsersManager(models.Manager):
         return errors
 # ======================================================================================================================
 # Table-1:
-class User(models.Model):
+class Users(models.Model):
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
     email = models.CharField(max_length=64)
@@ -58,12 +58,12 @@ class User(models.Model):
     objects = UsersManager()
 
     def __repr__(self):
-        return f"Users: ({self.first_name}, {self.last_name}, {self.email})"
+        return f"Users: ({self.first_name}, {self.last_name}, {self.email}), {self.password_hash})"
 # ======================================================================================================================
 # Table-2:
-class Comment(models.Model):
+class Comments(models.Model):
     message = models.TextField()
-    user = models.ForeignKey(User, related_name="comments")
+    user = models.ForeignKey(Users, related_name="comments")
     #
     # # Recall, had issue with not being able to populate the comment with a value
     # # -The error is related to the foriegn key.
