@@ -25,7 +25,7 @@ def wall(request):
 
     # time = datetime.now()
     # time = time.strftime("%Y/%m/%d %I:%M %p")
-    return render(request, "wall_app/index.html", {'messages': Messages.objects.all()})
+    return render(request, "wall_app/wall.html", {'messages': Messages.objects.all()})
 # ======================================================================================================================
 def post_message(request):
 
@@ -45,7 +45,7 @@ def post_message(request):
     messages = Messages.objects.all()
     context = {'messages': messages}
 
-    return render(request, "wall_app/index.html", context)
+    return render(request, "wall_app/wall.html", context)
 # ======================================================================================================================
 # ======================================================================================================================
 def validate(request):

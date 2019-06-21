@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d73fd4a4-52c9-425a-8f1a-a6879ec7a19f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/apps/wall_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/wall_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main/apps/wall_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/wall_app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,14 +14,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.3435072">
+    <splitter split-orientation="horizontal" split-proportion="0.134009">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main/apps/wall_app/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="72">
-                  <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+                <state relative-caret-position="77">
+                  <caret line="63" column="29" lean-forward="true" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                     <element signature="e#127#2405#0" />
@@ -29,10 +30,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main/apps/wall_app/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
+                <state relative-caret-position="144">
                   <caret line="6" column="24" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
@@ -48,8 +49,11 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="48">
-                  <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+                <state relative-caret-position="178">
+                  <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+                  <folding>
+                    <element signature="e#0#59#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -59,14 +63,20 @@
               <provider selected="true" editor-type-id="images" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/logged_in.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="171">
-                  <caret line="133" column="117" selection-start-line="133" selection-start-column="117" selection-end-line="133" selection-end-column="117" />
-                  <folding>
-                    <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
-                  </folding>
+                <state relative-caret-position="240">
+                  <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="240">
+                  <caret line="52" selection-start-line="52" selection-end-line="52" />
                 </state>
               </provider>
             </entry>
@@ -85,12 +95,16 @@
       <find>Users</find>
       <find>post_message</find>
       <find>session</find>
+      <find>comment</find>
       <find>Comments</find>
+      <find>index.html</find>
+      <find>Message</find>
     </findStrings>
     <replaceStrings>
       <replace>Messages</replace>
-      <replace>messages</replace>
       <replace>message</replace>
+      <replace>messages</replace>
+      <replace>wall.html</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -102,15 +116,16 @@
         <option value="$PROJECT_DIR$/main/apps/wall_app/urls.py" />
         <option value="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/logged_in.html" />
         <option value="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/reg_login.html" />
+        <option value="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html" />
         <option value="$PROJECT_DIR$/main/apps/wall_app/models.py" />
         <option value="$PROJECT_DIR$/main/apps/wall_app/views.py" />
-        <option value="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html" />
+        <option value="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="875" />
-    <option name="width" value="1053" />
+    <option name="x" value="1565" />
+    <option name="width" value="362" />
     <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -121,6 +136,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -167,7 +183,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -246,16 +261,16 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Python Console" order="1" />
-      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.4916759" weight="0.17816092" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.49056605" weight="0.17816092" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.4997416" weight="0.32952815" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.48779133" visible="true" weight="0.28275862" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.4861265" visible="true" weight="0.28275862" />
       <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.74972254" weight="0.29425287" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" sideWeight="0.51220864" side_tool="true" visible="true" weight="0.28275862" />
+      <window_info active="true" anchor="bottom" content_ui="combo" id="Project" order="11" sideWeight="0.51387346" side_tool="true" visible="true" weight="0.28275862" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -288,13 +303,6 @@
             <element signature="n#script#1;n#head#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/logged_in.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="21" column="79" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="79" />
         </state>
       </provider>
     </entry>
@@ -361,23 +369,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/urls.py">
+    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="24" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="24" />
+        <state relative-caret-position="75">
+          <caret line="117" column="47" lean-forward="true" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wire-frame.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/apps/wall_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        <state relative-caret-position="77">
+          <caret line="63" column="29" lean-forward="true" selection-start-line="63" selection-start-column="29" selection-end-line="63" selection-end-column="29" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
             <element signature="e#127#2405#0" />
@@ -385,20 +390,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
+    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        <state relative-caret-position="144">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html">
+    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="133" column="117" selection-start-line="133" selection-start-column="117" selection-end-line="133" selection-end-column="117" />
+        <state relative-caret-position="178">
+          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="e#0#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/logged_in.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wire-frame.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
         </state>
       </provider>
     </entry>
