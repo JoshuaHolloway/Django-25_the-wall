@@ -130,8 +130,8 @@
 
 
             <div class="card-body">
-                {% for comment in comments reversed %}
-                    <p class="card-text">ID-{{ comment.id }}: {{ comment.message }}  {{comment.created_at}} {{comment.user.first_name}}</p>
+                {% for message in messages reversed %}
+                    <p class="card-text">ID-{{ message.id }}: {{ message.message }}  {{message.created_at}} {{message.user.first_name}}</p>
                 {% endfor %}
             </div> <!-- card-body -->
 

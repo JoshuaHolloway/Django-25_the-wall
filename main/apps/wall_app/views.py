@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
-from .models import Comments, Users
+from .models import Messages, Users
 from datetime import datetime
 import bcrypt
 # ======================================================================================================================
@@ -25,7 +25,7 @@ def wall(request):
 
     # time = datetime.now()
     # time = time.strftime("%Y/%m/%d %I:%M %p")
-    return render(request, "wall_app/index.html", {'comments': Comments.objects.all()})
+    return render(request, "wall_app/index.html", {'messages': Messages.objects.all()})
 # ======================================================================================================================
 def post_message(request):
 
@@ -39,11 +39,11 @@ def post_message(request):
     #comment = Comment.objects.create(message=message) # BEFORE adding [FK]
     user_id = request.session['user_logged_in']['id']
     user = Users.objects.get(id=user_id)
-    comment = Comments.objects.create(message=message, user=user)
+    comment = Messages.objects.create(message=message, user=user)
 
     # Step 2: Pass table into HTML
-    comments = Comments.objects.all()
-    context = {'comments': comments}
+    messages = Messages.objects.all()
+    context = {'messages': messages}
 
     return render(request, "wall_app/index.html", context)
 # ======================================================================================================================

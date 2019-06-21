@@ -61,9 +61,9 @@ class Users(models.Model):
         return f"Users: ({self.first_name}, {self.last_name}, {self.email}), {self.password_hash})"
 # ======================================================================================================================
 # Table-2:
-class Comments(models.Model):
+class Messages(models.Model):
     message = models.TextField()
-    user = models.ForeignKey(Users, related_name="comments")
+    user = models.ForeignKey(Users, related_name="messages")
     #
     # # Recall, had issue with not being able to populate the comment with a value
     # # -The error is related to the foriegn key.

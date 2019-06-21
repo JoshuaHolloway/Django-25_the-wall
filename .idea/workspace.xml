@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d73fd4a4-52c9-425a-8f1a-a6879ec7a19f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/main/apps/wall_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/wall_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/apps/wall_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/wall_app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -12,17 +13,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.41564927">
+    <splitter split-orientation="horizontal" split-proportion="0.3435072">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main/apps/wall_app/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+                <state relative-caret-position="72">
+                  <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
-                    <element signature="e#127#2323#0" />
+                    <element signature="e#127#2405#0" />
                   </folding>
                 </state>
               </provider>
@@ -31,7 +32,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main/apps/wall_app/urls.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-18">
+                <state relative-caret-position="120">
                   <caret line="6" column="24" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#32#0" expanded="true" />
@@ -44,24 +45,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="331">
-                  <caret line="131" column="55" lean-forward="true" selection-start-line="131" selection-start-column="55" selection-end-line="131" selection-end-column="55" />
-                  <folding>
-                    <element signature="e#0#59#0" expanded="true" />
-                    <element signature="e#325#370#0" />
-                    <element signature="e#519#555#0" />
-                    <element signature="e#940#1087#0" />
-                    <element signature="e#1235#1284#0" />
-                    <element signature="e#1430#1589#0" />
-                    <element signature="e#1743#2232#0" />
-                    <element signature="e#2501#3079#0" />
-                    <element signature="e#3226#3980#0" />
-                    <element signature="e#4129#4817#0" />
-                    <element signature="e#4962#5022#0" />
-                  </folding>
+                <state relative-caret-position="48">
+                  <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -71,11 +59,11 @@
               <provider selected="true" editor-type-id="images" />
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="220">
-                  <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+                <state relative-caret-position="171">
+                  <caret line="133" column="117" selection-start-line="133" selection-start-column="117" selection-end-line="133" selection-end-column="117" />
                   <folding>
                     <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
                   </folding>
@@ -93,12 +81,17 @@
       <find>author</find>
       <find>index</find>
       <find>/*</find>
-      <find>Comments</find>
       <find>create</find>
       <find>Users</find>
       <find>post_message</find>
       <find>session</find>
+      <find>Comments</find>
     </findStrings>
+    <replaceStrings>
+      <replace>Messages</replace>
+      <replace>messages</replace>
+      <replace>message</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,15 +102,15 @@
         <option value="$PROJECT_DIR$/main/apps/wall_app/urls.py" />
         <option value="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/logged_in.html" />
         <option value="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/reg_login.html" />
-        <option value="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html" />
         <option value="$PROJECT_DIR$/main/apps/wall_app/models.py" />
         <option value="$PROJECT_DIR$/main/apps/wall_app/views.py" />
+        <option value="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="535" />
-    <option name="width" value="1391" />
+    <option name="x" value="875" />
+    <option name="width" value="1053" />
     <option name="height" value="1045" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -128,7 +121,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,6 +167,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,6 +240,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1840" height="1002" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -256,12 +250,12 @@
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.4997416" weight="0.32952815" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.48834628" weight="0.28275862" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.48779133" visible="true" weight="0.28275862" />
       <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.74972254" weight="0.29425287" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" sideWeight="0.5116537" side_tool="true" visible="true" weight="0.29425287" />
+      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" sideWeight="0.51220864" side_tool="true" visible="true" weight="0.28275862" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -369,7 +363,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/apps/wall_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
+        <state relative-caret-position="120">
           <caret line="6" column="24" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="24" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -380,43 +374,30 @@
     <entry file="file://$PROJECT_DIR$/wire-frame.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html">
+    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="129" lean-forward="true" selection-start-line="129" selection-end-line="129" />
+        <state relative-caret-position="72">
+          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
           <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#127#2405#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="131" column="55" lean-forward="true" selection-start-line="131" selection-start-column="55" selection-end-line="131" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <element signature="e#325#370#0" />
-            <element signature="e#519#555#0" />
-            <element signature="e#940#1087#0" />
-            <element signature="e#1235#1284#0" />
-            <element signature="e#1430#1589#0" />
-            <element signature="e#1743#2232#0" />
-            <element signature="e#2501#3079#0" />
-            <element signature="e#3226#3980#0" />
-            <element signature="e#4129#4817#0" />
-            <element signature="e#4962#5022#0" />
-          </folding>
+        <state relative-caret-position="48">
+          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/models.py">
+    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="53" column="52" lean-forward="true" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+        <state relative-caret-position="171">
+          <caret line="133" column="117" selection-start-line="133" selection-start-column="117" selection-end-line="133" selection-end-column="117" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#127#2323#0" />
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>
