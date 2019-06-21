@@ -15,7 +15,6 @@
         <style type="text/css">
 
           nav {
-
               border: black 1px solid;
           }
 
@@ -34,13 +33,17 @@
               height: 50px;
           }
 
-          #submit-button, #submit-button-login {
+          #submit-button, #submit-button-comment {
               background-color: red;
               color: white;
               width: 50%;
               margin-left: 49%;
               box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
           }
+
+          #submit-button { background-color: green; }
+          #submit-button-comment { background-color: blue; }
+
 
           label { display: inline-block; }
 
@@ -120,6 +123,23 @@
                 {% for message in messages reversed %}
                     <div id="message_box">
                         <p class="card-text">ID-{{ message.id }}: {{ message.message }}  {{message.created_at}} {{message.user.first_name}}</p>
+
+                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                    <form action='/post_comment' method='post'>
+                        {% csrf_token %}
+
+                        <!-- text-field -->
+                        <div class="form-group">
+                            <label for="comment">Post a Comment: </label>
+                            <input type="text" id="comment" class="field" name="comment" class="form-control">
+                        </div>
+
+                        <!-- submit-button -->
+                        <input type='submit' id="submit-button-comment" name="submit-button-comment" value='Post-Comment' class="form-control"
+                               class="shadow-lg p-3 mb-5 bg-white rounded">
+                    </form>
+                    <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
                     </div>
                 {% endfor %}
             </div> <!-- card-body -->
