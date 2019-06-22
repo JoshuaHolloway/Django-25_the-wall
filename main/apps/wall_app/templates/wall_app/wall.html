@@ -115,7 +115,7 @@
                     <div id="message_box">
                         <p class="card-text">ID-{{ message.id }}: {{ message.message }}  {{message.created_at}} {{message.user.first_name}}</p>
                         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-                        <form action='/post_comment' method='post'>
+                        <form action='/post_comment/{{message.user.id}}' method='post'>
                             {% csrf_token %}
 
                             <!-- text-field -->

@@ -5,7 +5,8 @@ urlpatterns = [
     url(r'^$', views.root),
     url(r'^wall$', views.wall),
     url(r'^post_message$', views.post_message),
-    url(r'^post_comment$', views.post_comment),
+    # url(r'^post_comment$', views.post_comment),
+    url(r'^post_comment/(?P<message_id>\d+)$', views.post_comment),
 
     # Register and Login
     url(r'^users/reg_login', views.reg_login),

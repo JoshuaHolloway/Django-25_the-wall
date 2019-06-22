@@ -44,7 +44,7 @@ def post_message(request):
 
     return render(request, "wall_app/wall.html", context)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-def post_comment(request):
+def post_comment(request, message_id):
 
     # Step 0: Grab the value of the field from request.POST['comment']
     comment = request.POST['comment']
@@ -52,8 +52,21 @@ def post_comment(request):
     # Step 1: Create a new comment row in the Table
     #comment = Comment.objects.create(message=message) # BEFORE adding [FK]
     user_id = request.session['user_logged_in']['id']
-    user = Users.objects.get(id=user_id)
-    comment = Comments.objects.create(comment=comment, user=user)
+
+    # TODO
+    # TODO
+    # TODO
+    # TODO - this is where I'm at.  How to assing a specific to
+    #        message and specific user to a comment and then display
+    #        only the comments corresponding to a given message????
+    # TODO
+    # TODO
+    # TODO - Crashes in create becasue I have not yet migrated the [FK] for the message to the comment
+
+    user = Users.objects.get(id=user_id)       # Grab specific user
+    message = Users.objects.get(id=message_id) # Grab specific message
+
+    comment = Comments.objects.create(comment=comment, user=user, message=message)
 
     # Step 2: Pass table into HTML
     comments = Comments.objects.all()

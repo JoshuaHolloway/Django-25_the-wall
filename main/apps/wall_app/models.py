@@ -52,7 +52,6 @@ class Users(models.Model):
     last_name = models.CharField(max_length=32)
     email = models.CharField(max_length=64)
     password_hash = models.CharField(max_length=128)
-    # logged_in = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     objects = UsersManager()
@@ -68,15 +67,16 @@ class Messages(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __repr__(self):
-        return f"Comment: ({self.message})"
+        return f"Messages: ({self.message})"
 # ======================================================================================================================
 # Table-3:
 class Comments(models.Model):
     comment = models.TextField()
-    user = models.ForeignKey(Users, related_name="comments")
+    # user    = models.ForeignKey(Users,    related_name="messages")
+    message = models.ForeignKey(Messages, related_name="comments")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     def __repr__(self):
-        return f"Comment: ({self.comment})"
+        return f"Comments: ({self.comment})"
 # ======================================================================================================================
