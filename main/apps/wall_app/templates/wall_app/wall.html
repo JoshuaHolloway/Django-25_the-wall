@@ -93,6 +93,86 @@
               width: 99%;
             }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .detailBox {
+                border:1px solid #bbb;
+                margin:50px;
+            }
+            .titleBox {
+                background-color:#fdfdfd;
+                padding:10px;
+            }
+            .titleBox label{
+              color:#444;
+              margin:0;
+              display:inline-block;
+            }
+
+            .commentBox {
+                padding:10px;
+                border-top:1px dotted #bbb;
+            }
+            .commentBox .form-group:first-child, .actionBox .form-group:first-child {
+                width:80%;
+            }
+            .commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+                width:18%;
+            }
+            .actionBox .form-group * {
+                width:100%;
+            }
+            .taskDescription {
+                margin-top:10px 0;
+            }
+            .commentList {
+                padding:0;
+                list-style:none;
+                max-height:200px;
+                overflow:auto;
+            }
+            .commentList li {
+                margin:0;
+                margin-top:10px;
+            }
+            .commentList li > div {
+                display:table-cell;
+            }
+            .commenterImage {
+                width:30px;
+                margin-right:5px;
+                height:100%;
+                float:left;
+            }
+            .commenterImage img {
+                width:100%;
+                border-radius:50%;
+            }
+            .commentText p {
+                margin:0;
+            }
+            .sub-text {
+                color:#aaa;
+                font-family:verdana;
+                font-size:11px;
+            }
+            .actionBox {
+                border-top:1px dotted #bbb;
+                padding:10px;
+            }
+
+
         </style>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
     </head>
@@ -117,20 +197,6 @@
         </nav>
         <!-- ------------------------------------------------------------------------------------------------------- -->
         <main>
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <form action='/post_message' method='post' id="message_area">
-                {% csrf_token %}
-
-                <div class="form-group">
-                    <label for="message">Post a message</label>
-                    <textarea class="form-control" class="field" id="message" name="message" rows="3"></textarea>
-                </div>
-
-                <!-- submit-button -->
-                <input type='submit' id="submit-button" name="submit-button" value='Post a Message' class="form-control"
-                       class="shadow-lg p-3 mb-5 bg-white rounded">
-            </form> <!--"message_area"-->
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div class="card-body">
                 {% for message in messages reversed %}
                     <div id="message_box_outer">
@@ -164,5 +230,44 @@
             </div> <!-- card-body -->
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
         </main>
+
+        <!-- Modified template from: https://codepen.io/magnus16/pen/buGiB -->
+        <div class="detailBox">
+            <div class="titleBox">
+              <label>Post a Message</label>
+                <button type="button" class="close" aria-hidden="true">&times;</button>
+                <form action='/post_message' class="form-inline" role="form" method='post'>
+                  {% csrf_token %}
+                    <div class="form-group">
+                        <input name="message" class="form-control" type="text" placeholder="Your Message" />
+                    </div>
+
+                    <div class="form-group">
+                        <button name="submit-button" class="btn btn-default">Add</button>
+                    </div>
+                </form>
+            </div>
+            <div class="commentBox">
+
+
+            </div>
+            <div class="actionBox">
+                <ul class="commentList">
+                  {% for message in messages reversed %}
+                    <li>
+                        <div class="commenterImage">
+                          <img src="http://placekitten.com/50/50" />
+                        </div>
+                        <div class="commentText">
+                            <p class="">{{ message.message }}</p> 
+                            <span class="date sub-text">on March 5th, 2014</span>
+
+                        </div>
+                    </li>
+                  {% endfor %}
+            </div>
+        </div>
+
+
     </body>
 </html>

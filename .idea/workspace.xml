@@ -36,16 +36,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wire-frame.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="76" column="35" lean-forward="true" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
+            <state relative-caret-position="-1200">
+              <caret line="71" column="70" lean-forward="true" selection-start-line="71" selection-start-column="70" selection-end-line="71" selection-end-column="70" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
                 <element signature="e#339#385#0" />
@@ -58,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="124" selection-start-line="124" selection-end-line="124" />
+            <state relative-caret-position="-154">
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
             </state>
           </provider>
         </entry>
@@ -109,8 +109,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="width" value="803" />
+    <option name="x" value="1744" />
+    <option name="width" value="1703" />
     <option name="height" value="1447" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -239,27 +239,38 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="0" width="803" height="1447" extended-state="1" />
+    <frame x="1744" y="0" width="1703" height="1447" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Python Console" order="1" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" sideWeight="0.4509804" visible="true" weight="0.28767124" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.4496732" weight="0.28767124" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.4995529" weight="0.32728648" />
-      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.48063463" weight="0.21917808" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.74278843" weight="0.29832572" />
+      <window_info anchor="bottom" id="Run" order="6" sideWeight="0.47867867" weight="0.21917808" />
+      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.74234235" weight="0.29832572" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" sideWeight="0.54901963" side_tool="true" visible="true" weight="0.28767124" />
+      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" sideWeight="0.5213213" side_tool="true" visible="true" weight="0.29832572" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main/apps/wall_app/views.py</url>
+          <line>52</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main/apps/wall_app/tests.py">
@@ -385,13 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/apps/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/apps/wall_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -412,10 +416,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wire-frame.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://C:/apps/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="184" selection-start-line="184" selection-end-line="184" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="76" column="35" lean-forward="true" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
+        <state relative-caret-position="-1200">
+          <caret line="71" column="70" lean-forward="true" selection-start-line="71" selection-start-column="70" selection-end-line="71" selection-end-column="70" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
             <element signature="e#339#385#0" />
@@ -423,16 +444,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="124" selection-start-line="124" selection-end-line="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wire-frame.png">
-      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
