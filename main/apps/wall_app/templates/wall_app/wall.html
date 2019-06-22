@@ -93,8 +93,21 @@
 
           #message_box {
             border: dashed 1px red;
-            /* background: red;
-            opacity: 0.5; */
+
+            padding-left: 10%;
+            width: 90%;
+
+            background: green;
+            opacity: 0.5;
+          }
+
+          #message_box_outer {
+            border: dashed 1px red;
+
+
+
+            background: blue;
+            opacity: 0.5;
           }
         </style>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -141,31 +154,33 @@
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div class="card-body">
                 {% for message in messages reversed %}
-                    <div id="message_box">
-                        <p class="card-text">ID-{{ message.id }}: {{ message.message }}  {{message.created_at}} {{message.user.first_name}}</p>
-                        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-                        <form action='/post_comment/{{message.id}}' method='post'>
-                            {% csrf_token %}
+                    <div id="message_box_outer">
+                        <div id="message_box">
+                            <p class="card-text">{{message.user.first_name}}: {{ message.message }}  {{message.created_at}} {{message.user.first_name}}</p>
+                            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                            <form action='/post_comment/{{message.id}}' method='post'>
+                                {% csrf_token %}
 
-                            <!-- text-field -->
-                            <div class="form-group">
-                                <label for="comment">Post a Comment: </label>
-                                <input type="text" id="comment" class="field" name="comment" class="form-control">
-                            </div>
+                                <!-- text-field -->
+                                <div class="form-group">
+                                    <label for="comment"></label>
+                                    <input type="text" id="comment" class="field" name="comment" class="form-control">
+                                </div>
 
-                            <!-- submit-button -->
-                            <input type='submit' id="submit-button-comment" name="submit-button-comment" value='Post-Comment' class="form-control"
-                                   class="shadow-lg p-3 mb-5 bg-white rounded">
+                                <!-- submit-button -->
+                                <input type='submit' id="submit-button-comment" name="submit-button-comment" value='Post-Comment' class="form-control"
+                                       class="shadow-lg p-3 mb-5 bg-white rounded">
 
-                            {% for comment in message.comments.all %}
-                                <div id="comment_box">
-                                <p class="card-text">ID-{{ comment.id }}: {{ comment.comment }}  {{comment.created_at}} {{comment.user.first_name}}</p>
-                            {% endfor %}
-                            </div> <!-- comment_box-->
+                                {% for comment in message.comments.all %}
+                                    <div id="comment_box">
+                                    <p class="card-text">ID-{{ comment.id }}: {{ comment.comment }}  {{comment.created_at}} {{comment.user.first_name}}</p>
+                                {% endfor %}
+                                </div> <!-- comment_box-->
 
-                        </form>
-                        <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-                    </div> <!-- message_box-->
+                            </form>
+                            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                        </div> <!-- message_box-->
+                    </div> <!-- message_box_outer-->
                 {% endfor %}
             </div> <!-- card-body -->
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->

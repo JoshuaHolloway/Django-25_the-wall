@@ -74,11 +74,8 @@ class Messages(models.Model):
 class Comments(models.Model):
     comment = models.TextField()
     # TODO: Tie each comment to a user
-    # user    = models.ForeignKey(Users,    related_name="messages")
-
-
+    user    = models.ForeignKey(Users,    related_name="comments")
     message = models.ForeignKey(Messages, related_name="comments")
-
 
     #created_at = models.DateTimeField(auto_now_add=True)
     #updated_at = models.DateTimeField(auto_now=True)

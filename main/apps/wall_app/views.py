@@ -21,6 +21,8 @@ def root(request):
     else:
         request.session['logged_in'] = True # TODO: Remove hack
 
+    # TODO: Correct this logic
+    #  -Desired: if user is already logged in then route to message/comment-page, else, route to register/login-page
     if request.session['logged_in'] == None or request.session['logged_in'] == False:
         return redirect("/users/reg_login")
     else:
@@ -31,6 +33,15 @@ def reg_login(request):
     return render(request, "wall_app/reg_login.html")
 # ======================================================================================================================
 def wall(request):
+
+    # DEBUG
+    user_id = request.session['user_logged_in']['id']
+    user = Users.objects.get(id=user_id)       # Grab specific user
+    print(user)
+    #message = Messages.objects.create(message='test message', user=user)
+    message = Messages.objects.create(message='test message')
+    print(Messages.objects.all())
+
 
     # time = datetime.now()
     # time = time.strftime("%Y/%m/%d %I:%M %p")
@@ -46,9 +57,9 @@ def post_message(request):
     user_id = request.session['user_logged_in']['id']
 
     # TODO: Tie each message to a specific user (e.g., uncomment out below)
-    # user = Users.objects.get(id=user_id)
-    # comment = Messages.objects.create(message=message, user=user)
-    comment = Messages.objects.create(message=message)
+    user = Users.objects.get(id=user_id)
+    # message = Messages.objects.create(message=message, user=user)
+    message = Messages.objects.create(message=message)
 
     # Step 2: Pass table into HTML
     messages = Messages.objects.all()
@@ -64,10 +75,10 @@ def post_comment(request, message_id):
     # Step 1: Create a new comment row in the Table
     #comment = Comment.objects.create(message=message) # BEFORE adding [FK]
     user_id = request.session['user_logged_in']['id']
-    #user = Users.objects.get(id=user_id)       # Grab specific user
+    user = Users.objects.get(id=user_id)       # Grab specific user
     message = Messages.objects.get(id=message_id) # Grab specific message
 
-    comment = Comments.objects.create(comment=comment, message=message)
+    comment = Comments.objects.create(comment=comment, message=message, user=user)
 
     # Step 2: Pass table into HTML
     comments = Comments.objects.all()
