@@ -34,13 +34,13 @@ def reg_login(request):
 # ======================================================================================================================
 def wall(request):
 
-    # DEBUG
-    user_id = request.session['user_logged_in']['id']
-    user = Users.objects.get(id=user_id)       # Grab specific user
-    print(user)
-    #message = Messages.objects.create(message='test message', user=user)
-    message = Messages.objects.create(message='test message')
-    print(Messages.objects.all())
+    # # DEBUG
+    # user_id = request.session['user_logged_in']['id']
+    # user = Users.objects.get(id=user_id)       # Grab specific user
+    # print(user)
+    # #message = Messages.objects.create(message='test message', user=user)
+    # message = Messages.objects.create(message='test message')
+    # print(Messages.objects.all())
 
 
     # time = datetime.now()
@@ -58,8 +58,8 @@ def post_message(request):
 
     # TODO: Tie each message to a specific user (e.g., uncomment out below)
     user = Users.objects.get(id=user_id)
-    # message = Messages.objects.create(message=message, user=user)
-    message = Messages.objects.create(message=message)
+    message = Messages.objects.create(message=message, user=user)
+    #message = Messages.objects.create(message=message)
 
     # Step 2: Pass table into HTML
     messages = Messages.objects.all()

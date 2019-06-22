@@ -63,7 +63,7 @@ class Users(models.Model):
 class Messages(models.Model):
     message = models.TextField()
     # TODO: Tie each Message to a user
-    #user = models.ForeignKey(Users, related_name="messages")
+    user = models.ForeignKey(Users, related_name="messages")
     #created_at = models.DateTimeField(auto_now_add=True)
     #updated_at = models.DateTimeField(auto_now=True)
 

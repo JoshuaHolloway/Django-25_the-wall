@@ -4,9 +4,7 @@
     <list default="true" id="d73fd4a4-52c9-425a-8f1a-a6879ec7a19f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/apps/wall_app/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/wall_app/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/apps/wall_app/migrations/0002_comments_message.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main/apps/wall_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/wall_app/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main/apps/wall_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/apps/wall_app/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,14 +14,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.32995528">
+    <splitter split-orientation="horizontal" split-proportion="0.28978068">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main/apps/wall_app/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="572">
-                  <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+                <state relative-caret-position="176">
+                  <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
                   <folding>
                     <element signature="e#127#2405#0" />
                   </folding>
@@ -46,45 +44,44 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="528">
-                  <caret line="80" column="81" selection-start-line="80" selection-start-column="81" selection-end-line="80" selection-end-column="81" />
-                  <folding>
-                    <element signature="e#0#59#0" expanded="true" />
-                    <element signature="e#339#385#0" />
-                    <element signature="e#536#573#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://C:/apps/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3630">
-                  <caret line="184" selection-start-line="184" selection-end-line="184" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/wire-frame.png">
-              <provider selected="true" editor-type-id="images" />
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3410">
-                  <caret line="155" column="42" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="42" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="horizontal" split-proportion="0.5">
+          <split-first>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="166">
+                      <caret line="36" column="4" selection-start-line="36" selection-start-column="6" selection-end-line="42" selection-end-column="35" />
+                      <folding>
+                        <element signature="e#0#59#0" expanded="true" />
+                        <element signature="e#339#385#0" />
+                        <element signature="e#536#573#0" />
+                      </folding>
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+              <file pinned="false" current-in-tab="false">
+                <entry file="file://$PROJECT_DIR$/wire-frame.png">
+                  <provider selected="true" editor-type-id="images" />
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="298">
+                      <caret line="137" column="35" lean-forward="true" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-second>
     </splitter>
   </component>
@@ -130,8 +127,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1744" />
-    <option name="width" value="1703" />
+    <option name="x" value="56" />
+    <option name="width" value="1702" />
     <option name="height" value="1447" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -260,23 +257,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="-8" width="3393" height="1456" extended-state="6" />
+    <frame x="1266" y="0" width="2181" height="1447" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Python Console" order="1" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="2" sideWeight="0.40983605" visible="true" weight="0.40589568" />
+      <window_info anchor="bottom" id="Terminal" order="2" sideWeight="0.45263648" weight="0.28767124" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" sideWeight="0.4995529" weight="0.32728648" />
       <window_info anchor="bottom" id="Run" order="6" sideWeight="0.48108107" weight="0.21917808" />
-      <window_info anchor="bottom" id="Debug" order="7" sideWeight="0.7450111" weight="0.29908675" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" sideWeight="0.7438171" visible="true" weight="0.29832572" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" sideWeight="0.59016395" side_tool="true" visible="true" weight="0.40589568" />
+      <window_info anchor="bottom" content_ui="combo" id="Project" order="11" sideWeight="0.2561829" side_tool="true" visible="true" weight="0.29832572" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -299,21 +296,6 @@
           <url>file://$PROJECT_DIR$/main/apps/wall_app/views.py</url>
           <line>52</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main/apps/wall_app/views.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main/apps/wall_app/views.py</url>
-          <line>37</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main/apps/wall_app/views.py</url>
-          <line>41</line>
-          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -442,13 +424,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/models.py">
+    <entry file="file://C:/apps/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
-          <folding>
-            <element signature="e#127#2405#0" />
-          </folding>
+        <state relative-caret-position="247">
+          <caret line="184" selection-start-line="184" selection-end-line="184" />
         </state>
       </provider>
     </entry>
@@ -462,32 +441,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="80" column="81" selection-start-line="80" selection-start-column="81" selection-end-line="80" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <element signature="e#339#385#0" />
-            <element signature="e#536#573#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/apps/Anaconda3/Lib/site-packages/django/core/handlers/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3630">
-          <caret line="184" selection-start-line="184" selection-end-line="184" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wire-frame.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main/apps/wall_app/templates/wall_app/wall.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3410">
-          <caret line="155" column="42" selection-start-line="155" selection-start-column="34" selection-end-line="155" selection-end-column="42" />
+        <state relative-caret-position="298">
+          <caret line="137" column="35" lean-forward="true" selection-start-line="137" selection-start-column="35" selection-end-line="137" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
+          <folding>
+            <element signature="e#127#2405#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/apps/wall_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="36" column="4" selection-start-line="36" selection-start-column="6" selection-end-line="42" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#339#385#0" />
+            <element signature="e#536#573#0" />
+          </folding>
         </state>
       </provider>
     </entry>
