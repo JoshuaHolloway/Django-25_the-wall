@@ -91,23 +91,30 @@
             vertical-align: right;
           }
 
+          #message {
+            border: 1px black solid;
+          }
+
           #message_box {
             border: dashed 1px red;
 
             padding-left: 10%;
             width: 90%;
 
+            /*
             background: green;
             opacity: 0.5;
+            */
           }
 
           #message_box_outer {
             border: dashed 1px red;
 
 
-
+            /*
             background: blue;
             opacity: 0.5;
+            */
           }
         </style>
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
@@ -141,10 +148,9 @@
             <form action='/post_message' method='post'>
                 {% csrf_token %}
 
-                <!-- text-field -->
                 <div class="form-group">
-                    <label for="message">Post a Message: </label>
-                    <input type="text" id="message" class="field" name="message" class="form-control">
+                    <label for="message">Example textarea</label>
+                    <textarea class="form-control" class="field" id="message" name="message" rows="3"></textarea>
                 </div>
 
                 <!-- submit-button -->
