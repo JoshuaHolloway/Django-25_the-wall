@@ -14,8 +14,38 @@
         <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
         <style type="text/css">
 
+          *{
+            margin: 0;
+            border: 0;
+            padding: 0;
+          }
+
           nav {
               border: black 1px solid;
+              min-height: 50px;
+
+              /*DEBUG*/
+              /*
+              background: red;
+              opacity: 0.5;
+              */
+          }
+
+          nav div{
+            display: inline-block;
+            vertical-align: top;
+          }
+
+          nav #nav-right {
+            float: right;
+            /* margin-left: 70%; */
+            /* what is best way to get conetnt inside nav-right to align right?*/
+          }
+
+          nav #nav-right div {
+            display: block;
+            margin-top: 0;
+            margin-bottom: 0;
           }
 
           main {
@@ -50,14 +80,12 @@
           #nav-left{
             /* background: blue; */
             width: 40%
-            height: 10%
             border: 1px black solid;
           }
 
           #nav-right{
             /* background: red; */
             width: 40%
-            height: 10%
             border: 1px black solid;
             display: inline-block;
             vertical-align: right;
@@ -80,18 +108,19 @@
             </div>
             <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
             <div id="nav-right">
-                <h4>Hello </h4>
-
-                <!-- TODO: Log off route -->
-                <h5> <a href="/users/logout">Logout</a> </h5>
-
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                <!--If user is logged in then display message -->
+                {% if request.session.user_logged_in.logged_in == True %}
+                  <div>
+                    <h1>You are logged in {{request.session.user_logged_in.first_name}}!</h1>
+                  </div>
+                {% endif %}
+                <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+                <div>
+                    <h5> <a href="/users/logout">Logout</a> </h5>
+                </div>
             </div>
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-            <!--If user is logged in then display message -->
-            {% if request.session.user_logged_in.logged_in == True %}
-                <h1>You are logged in {{request.session.user_logged_in.first_name}}!</h1>
-            {% endif %}
-            <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+
         </nav>
         <!-- ------------------------------------------------------------------------------------------------------- -->
         <main>
@@ -129,8 +158,8 @@
                                    class="shadow-lg p-3 mb-5 bg-white rounded">
 
                             {% for comment in message.comments.all %}
-                                    <div id="comment_box">
-                                    <p class="card-text">ID-{{ comment.id }}: {{ comment.comment }}  {{comment.created_at}} {{comment.user.first_name}}</p>
+                                <div id="comment_box">
+                                <p class="card-text">ID-{{ comment.id }}: {{ comment.comment }}  {{comment.created_at}} {{comment.user.first_name}}</p>
                             {% endfor %}
                             </div> <!-- comment_box-->
 
