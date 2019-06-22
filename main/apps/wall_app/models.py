@@ -62,9 +62,10 @@ class Users(models.Model):
 # Table-2:
 class Messages(models.Model):
     message = models.TextField()
-    user = models.ForeignKey(Users, related_name="messages")
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # TODO: Tie each Message to a user
+    #user = models.ForeignKey(Users, related_name="messages")
+    #created_at = models.DateTimeField(auto_now_add=True)
+    #updated_at = models.DateTimeField(auto_now=True)
 
     def __repr__(self):
         return f"Messages: ({self.message})"
@@ -72,10 +73,15 @@ class Messages(models.Model):
 # Table-3:
 class Comments(models.Model):
     comment = models.TextField()
+    # TODO: Tie each comment to a user
     # user    = models.ForeignKey(Users,    related_name="messages")
+
+
     message = models.ForeignKey(Messages, related_name="comments")
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+
+
+    #created_at = models.DateTimeField(auto_now_add=True)
+    #updated_at = models.DateTimeField(auto_now=True)
 
     def __repr__(self):
         return f"Comments: ({self.comment})"

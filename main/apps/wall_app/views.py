@@ -13,10 +13,19 @@ def get_all_users_info():
 # ======================================================================================================================
 # ======================================================================================================================
 def root(request):
+
     # Initialize session
     if 'user_logged_in' not in request.session:
         request.session['user_logged_in'] = {}
-    return redirect("/users/reg_login")
+        request.session['logged_in'] = False # TODO: Change this to an element of the logged_in dictinoary
+    else:
+        request.session['logged_in'] = True # TODO: Remove hack
+
+    if request.session['logged_in'] == None or request.session['logged_in'] == False:
+        return redirect("/users/reg_login")
+    else:
+        # if logged-in then go to wall
+        return redirect("/wall")
 # ======================================================================================================================
 def reg_login(request):
     return render(request, "wall_app/reg_login.html")
@@ -35,8 +44,11 @@ def post_message(request):
     # Step 1: Create a new message row in the Table
     #comment = Comment.objects.create(message=message) # BEFORE adding [FK]
     user_id = request.session['user_logged_in']['id']
-    user = Users.objects.get(id=user_id)
-    comment = Messages.objects.create(message=message, user=user)
+
+    # TODO: Tie each message to a specific user (e.g., uncomment out below)
+    # user = Users.objects.get(id=user_id)
+    # comment = Messages.objects.create(message=message, user=user)
+    comment = Messages.objects.create(message=message)
 
     # Step 2: Pass table into HTML
     messages = Messages.objects.all()
@@ -52,21 +64,10 @@ def post_comment(request, message_id):
     # Step 1: Create a new comment row in the Table
     #comment = Comment.objects.create(message=message) # BEFORE adding [FK]
     user_id = request.session['user_logged_in']['id']
+    #user = Users.objects.get(id=user_id)       # Grab specific user
+    message = Messages.objects.get(id=message_id) # Grab specific message
 
-    # TODO
-    # TODO
-    # TODO
-    # TODO - this is where I'm at.  How to assing a specific to
-    #        message and specific user to a comment and then display
-    #        only the comments corresponding to a given message????
-    # TODO
-    # TODO
-    # TODO - Crashes in create becasue I have not yet migrated the [FK] for the message to the comment
-
-    user = Users.objects.get(id=user_id)       # Grab specific user
-    message = Users.objects.get(id=message_id) # Grab specific message
-
-    comment = Comments.objects.create(comment=comment, user=user, message=message)
+    comment = Comments.objects.create(comment=comment, message=message)
 
     # Step 2: Pass table into HTML
     comments = Comments.objects.all()
@@ -141,6 +142,10 @@ def userLogin(request):
     # Grab entered password and test against stored hash
     password_login = request.POST['password-login']
     if bcrypt.checkpw(password_login.encode(), user.password_hash.encode()):
+
+        # Set global logged-in variable to True
+        request.session['logged_in'] = True
+
         print("password match")
 
         # Set Session with logged-in users info
@@ -161,5 +166,6 @@ def userLogin(request):
 # ======================================================================================================================
 def logout(request):
     request.session.pop('user_logged_in')
+    request.session['logged_in'] = True
     return redirect("/")
 # ======================================================================================================================
