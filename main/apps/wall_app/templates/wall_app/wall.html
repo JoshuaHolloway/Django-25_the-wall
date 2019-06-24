@@ -19,92 +19,6 @@
                 border: 0;
                 padding: 0;
             }
-            /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-            /* nav { border: black 1px solid; } */
-            /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
-            main {
-                border: black 1px solid;
-
-                width: 98%;
-                margin: 0.5%;
-                align-items: center;
-                padding: 0.5%;
-                text-align: center;
-            }
-
-            #submit-button, #submit-button-comment {
-                color: white;
-                width: 50%;
-                margin-left: 49%;
-                box-shadow: 0 0 5px 2px rgba(64, 32, 128, .5);
-                float: right;
-            }
-
-            #submit-button {
-                background-color: blue;
-                width: 20%;
-            }
-            #submit-button-comment {
-                background-color: green;
-                width: 15%;
-            }
-
-            label { display: inline-block; }
-
-            .field {
-                border-color: black;
-                width: 50%;
-                float: right;
-            }
-
-            #message {
-                border: 1px black solid;
-            }
-
-            #message_box {
-                border: dashed 1px red;
-
-                padding-left: 10%;
-                width: 90%;
-
-                /*
-                background: green;
-                opacity: 0.5;
-                */
-            }
-
-            #message_box_outer {
-                border: dashed 1px red;
-
-
-                background: blue;
-                opacity: 0.5;
-
-            }
-
-            #message_area div label{
-              text-align: left;
-              display: block;
-            }
-
-            #message_area div textarea {
-              align-items: center;
-              display: block;
-              width: 99%;
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             .detailBox {
                 border:1px solid #bbb;
@@ -149,16 +63,7 @@
             .commentList li > div {
                 display:table-cell;
             }
-            .commenterImage {
-                width:30px;
-                margin-right:5px;
-                height:100%;
-                float:left;
-            }
-            .commenterImage img {
-                width:100%;
-                border-radius:50%;
-            }
+
             .commentText p {
                 margin:0;
             }
@@ -170,6 +75,10 @@
             .actionBox {
                 border-top:1px dotted #bbb;
                 padding:10px;
+            }
+
+            #josh {
+                height: 1000px;
             }
 
 
@@ -198,17 +107,16 @@
         <!-- ------------------------------------------------------------------------------------------------------- -->
         <main>
           <!-- Modified template from: https://codepen.io/magnus16/pen/buGiB -->
-          <div class="detailBox">
+          <div class="detailBox" >
               <div class="titleBox">
                 <label>Post a Message</label>
-                  <button type="button" class="close" aria-hidden="true">&times;</button>
                   <form action='/post_message' class="form-inline" role="form" method='post'>
                     {% csrf_token %}
                       <div class="form-group">
                           <input name="message" class="form-control" type="text" placeholder="Your Message" />
                       </div>
 
-                      <div class="form-group">
+                      <div class="form-group" >
                           <button name="submit-button" class="btn btn-default">Add</button>
                       </div>
                   </form>
@@ -220,10 +128,7 @@
                   <ul class="commentList">
                     {% for message in messages reversed %}
                       <li>
-                          <div class="commenterImage">
-                            <img src="http://placekitten.com/50/50" />
-                          </div>
-                          <div class="commentText">
+                          <div class="commentText" id="message-box" >
                               <p class="">{{ message.message }}</p>
                               <span class="date sub-text">By {{message.user.first_name}} on {{message.created_at}}</span>
                           </div>
@@ -235,7 +140,6 @@
                           <div class="detailBox">
                               <div class="titleBox">
                                 <label>Post a Comment</label>
-                                  <button type="button" class="close" aria-hidden="true">&times;</button>
                                   <form action='/post_comment/{{message.id}}' class="form-inline" role="form" method='post'>
                                     {% csrf_token %}
                                       <div class="form-group">
@@ -254,9 +158,7 @@
                                   <ul class="commentList">
                                     {% for comment in message.comments.all %}
                                       <li>
-                                          <div class="commenterImage">
-                                            <img src="http://placekitten.com/50/50" />
-                                          </div>
+
                                           <div class="commentText">
                                               <p class="">{{ comment.comment }}</p>
                                               <span class="date sub-text">{{comment.created_at}}</span>
@@ -264,12 +166,12 @@
                                           </div>
                                       </li>
                                     {% endfor %}
+                                  </ul>
                               </div>
                           </div>
-
-
                       </li>
                     {% endfor %}
+                  </ul>
               </div>
           </div>
 

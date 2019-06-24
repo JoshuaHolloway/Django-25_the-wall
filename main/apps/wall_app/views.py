@@ -18,33 +18,13 @@ def root(request):
     if 'user_logged_in' not in request.session:
         request.session['user_logged_in'] = {}
         request.session['logged_in'] = False # TODO: Change this to an element of the logged_in dictinoary
-    else:
-        request.session['logged_in'] = True # TODO: Remove hack
 
-    # TODO: Correct this logic
-    #  -Desired: if user is already logged in then route to message/comment-page, else, route to register/login-page
-    if request.session['logged_in'] == None or request.session['logged_in'] == False:
-        return redirect("/users/reg_login")
-    else:
-        # if logged-in then go to wall
-        return redirect("/wall")
+    return redirect("/users/reg_login")
 # ======================================================================================================================
 def reg_login(request):
     return render(request, "wall_app/reg_login.html")
 # ======================================================================================================================
 def wall(request):
-
-    # # DEBUG
-    # user_id = request.session['user_logged_in']['id']
-    # user = Users.objects.get(id=user_id)       # Grab specific user
-    # print(user)
-    # #message = Messages.objects.create(message='test message', user=user)
-    # message = Messages.objects.create(message='test message')
-    # print(Messages.objects.all())
-
-
-    # time = datetime.now()
-    # time = time.strftime("%Y/%m/%d %I:%M %p")
     return render(request, "wall_app/wall.html", {'messages': Messages.objects.all()})
 # ======================================================================================================================
 def post_message(request):
